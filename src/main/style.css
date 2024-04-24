@@ -1,0 +1,235 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(237, 239, 242);
+    font-family: "Calibri", "Roboto", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.chat-window {
+    width: calc(100% - 20px);
+    max-width: 600px;
+    height: 750px;
+    border-radius: 20px;
+    background-color: #f8f8f8;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.ws-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    gap: 2rem;
+}
+
+.top-section {
+    background-color: rgb(255, 255, 255);
+    height: 10%;
+    padding: 1rem;
+    box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.web-button {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+}
+
+.close {
+    background-color: rgb(255, 56, 66);
+}
+
+.minimize {
+    background-color: rgb(243, 209, 80);
+}
+
+.maximize {
+    background-color: rgb(127, 238, 136);
+}
+
+.title {
+    text-align: center;
+    color: rgb(254, 108, 2);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+}
+
+.messages {
+    list-style: none;
+    padding: 2rem;
+    margin: 0;
+    height: 75%;
+    overflow: scroll;
+}
+
+.message {
+    clear: both;
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: all 0.5s linear;
+    opacity: 1;
+}
+
+.messages .message.left .avatar {
+    background-color: rgb(245, 113, 110);
+    float: left;
+}
+
+.messages .message.left .text-wrapper {
+    background-color: rgb(255, 230, 203);
+    margin-left: 20px;
+}
+
+.messages .message.left .text-wrapper::after,
+.messages .message.left .text-wrapper::before {
+    right: 100%;
+    border-right-color: #ffe6cb;
+}
+
+.messages .message.left .text {
+    color: rgb(196, 136, 67);
+}
+
+.messages .message.right .avatar {
+    background-color: rgb(255, 111, 119);
+    float: right;
+}
+
+.messages .message.right .text-wrapper {
+    background-color: rgb(247, 21, 82);
+    margin-right: 20px;
+    float: right;
+}
+
+.messages .message.right .text-wrapper::after,
+.messages .message.right .text-wrapper::before {
+    left: 100%;
+    border-left-color: rgb(247, 21, 82);
+}
+
+.messages .message.right .text {
+    color: rgb(255, 255, 255);
+}
+
+.messages .message.appeared {
+    opacity: 1;
+}
+
+.messages .message .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.messages .message .text-wrapper {
+    display: inline-block;
+    padding: 15px;
+    border-radius: 8px;
+    width: calc(100% - 220px);
+    min-width: 100px;
+    position: relative;
+}
+
+.messages .message .text-wrapper::after,
+.messages .message .text-wrapper:before {
+    top: 18px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.messages .message .text-wrapper::after {
+    border-width: 13px;
+    margin-top: 0;
+}
+
+.messages .message .text-wrapper::before {
+    border-width: 15px;
+    margin-top: -2px;
+}
+
+.messages .message .text-wrapper .text {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 1rem;
+    height: 15%;
+}
+
+.input-outer {
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid rgb(188, 189, 192);
+    width: calc(100% - 160px);
+    position: relative;
+    padding: 0 20px;
+}
+
+input {
+    border: none;
+    height: 100%;
+    box-sizing: border-box;
+    width: calc(100% - 40px);
+    position: absolute;
+    outline-width: 0;
+    color: rgb(128, 128, 128);
+    font-size: 18px;
+}
+
+.message-btn {
+    width: 140px;
+    height: 50px;
+    display: inline-block;
+    border-radius: 50px;
+    background-color: rgb(254, 108, 2);
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    text-align: center;
+    float: right;
+    font-size: 18px;
+}
+
+.message-btn:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(252, 189, 131);
+}
+
+.send-message .text {
+    font-size: 18px;
+    font-weight: 300;
+    display: inline-block;
+    line-height: 48px;
+}
+
+.message-template {
+    display: none;
+}

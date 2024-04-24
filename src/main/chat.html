@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.0/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css"/>
+    <title>WebSocket Chat</title>
+</head>
+<body>
+<div class="chat-window">
+    <div class="top-section">
+        <div class="buttons">
+            <div class="web-button close"></div>
+            <div class="web-button minimize"></div>
+            <div class="web-button maximize"></div>
+        </div>
+        <div class="title">
+
+            <img src="../assets/img/websocket.png" class="ws-icon">
+            WebSocket Chat
+        </div>
+    </div>
+    <ul class="messages" id="messages">
+        <li id="message" class="message right">
+            <div class="avatar"></div>
+            <div class="text-wrapper">
+                <div class="text">Hallo message!</div>
+            </div>
+        </li>
+    </ul>
+    <div class="bottom-section">
+        <div class="input-outer">
+            <input id="message-input" placeholder="Message..."/>
+        </div>
+        <button class="message-btn">
+            Send
+        </button>
+    </div>
+</div>
+</body>
+</html>
