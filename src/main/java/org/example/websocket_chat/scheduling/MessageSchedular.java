@@ -1,4 +1,4 @@
-package chat.scheduling;
+package org.example.websocket_chat.scheduling;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.messaging.simp.SimpMessagingTemplate;

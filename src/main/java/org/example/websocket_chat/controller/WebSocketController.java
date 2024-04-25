@@ -1,4 +1,4 @@
-package chat.controller;
+package org.example.websocket_chat.controller;
 
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;

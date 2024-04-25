@@ -1,4 +1,4 @@
-package chat.listener;
+package org.example.websocket_chat.listener;
 
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
